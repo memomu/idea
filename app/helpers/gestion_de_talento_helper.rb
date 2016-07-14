@@ -1,0 +1,2 @@
+module GestionDeTalentoHelper
+end
