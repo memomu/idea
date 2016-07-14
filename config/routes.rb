@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+  get 'soluciones_digitales/soluciones_digitales'
+
+  get 'soluciones_digitales/web_design'
+
+  get 'soluciones_digitales/makrketing'
+
+  get 'soluciones_digitales/digital'
+
+  get 'soluciones_digitales/desarrollo_de_web_apps'
+
+  get 'soluciones_digitales/branding'
+
+  get 'idearia/nosotros'
+
+  get 'emprendedores/emprendedores'
+
+  get 'emprendedores/desafio_latam'
+
   get 'gestion_de_talento/gestion_de_talento'
 
   get 'proyectos_de_innovacion/proyectos_de_innovacion'
