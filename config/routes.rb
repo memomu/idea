@@ -1,5 +1,55 @@
 Rails.application.routes.draw do
-  get 'soluciones_digitales/soluciones_digitales'
+
+
+  get '/desarrollo_de_talento' => 'desarrollo_de_talento#desarrollo_de_talento'
+
+  get 'd_talento/competencias_de_innovacion'
+
+  get 'd_talento/intelligent'
+
+  get 'd_talento/people'
+
+  get 'conferencias/innovacion'
+
+  get 'conferencias/planeacion'
+
+  get 'conferencias/liderazgo'
+
+  get 'conferencias/trabajo_en_equipo'
+
+  get 'talleres/lean_startup'
+
+  get 'talleres/prototipado'
+
+  get 'talleres/creatividad'
+
+  get 'talleres/modelos_de_negocio'
+
+  get 'talleres/legal_para_startups'
+
+  get 'talleres/finanzad_de_supervivencia'
+
+  get 'c_org/nuevas_lineas_de_negocio'
+
+  get 'c_org/cultura_de_la_innovacion'
+
+  get 'c_org/implementacion_de_ideas_de_negocio'
+
+  get 'c_org/planeacion_estrategica'
+
+  get '/academy' => 'academy#academy'
+
+  get 'academy/emprendedores'
+
+  get 'academy/organizaciones'
+
+  get 'academy/gestion_de_talento'
+
+  get 'academy/herramientas'
+
+  get 'academy/conferencias'
+
+  get '/soluciones_digitales' => 'soluciones_digitales#soluciones_digitales'
 
   get 'soluciones_digitales/web_design'
 
@@ -13,13 +63,14 @@ Rails.application.routes.draw do
 
   get 'idearia/nosotros'
 
-  get 'emprendedores/emprendedores'
+  get '/emprendedores' => 'emprendedores#emprendedores'
 
   get 'emprendedores/desafio_latam'
 
   get 'gestion_de_talento/gestion_de_talento'
 
-  get 'proyectos_de_innovacion/proyectos_de_innovacion'
+
+  get '/proyectos_de_innovacion' => 'proyectos_de_innovacion#proyectos_de_innovacion'
 
   get 'welcome/index'
 

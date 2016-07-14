@@ -1,0 +1,2 @@
+module DTalentoHelper
+end
