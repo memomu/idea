@@ -1,42 +1,48 @@
 Rails.application.routes.draw do
 
 
-  get '/desarrollo_de_talento' => 'desarrollo_de_talento#desarrollo_de_talento'
+ get '/desarrollo_de_talento' => 'desarrollo_de_talento#desarrollo_de_talento'
 
-  get 'd_talento/competencias_de_innovacion'
+ 
 
-  get 'd_talento/intelligent'
+  get '/academy/desarrollo_de_talento/competencias_de_innovacion' => 'd_talento#competencias_de_innovacion'
 
-  get 'd_talento/people'
+  get '/academy/desarrollo_de_talento/intelligent_people' => 'd_talento#intelligent_people'
 
-  get 'conferencias/innovacion'
 
-  get 'conferencias/planeacion'
 
-  get 'conferencias/liderazgo'
+  get '/academy/conferencias/innovacion' => 'conferencias#innovacion'
 
-  get 'conferencias/trabajo_en_equipo'
+  get '/academy/conferencias/planeacion' => 'conferencias#planeacion'
 
-  get 'talleres/lean_startup'
+  get '/academy/conferencias/liderazgo' => 'conferencias#liderazgo'
 
-  get 'talleres/prototipado'
+  get '/academy/conferencias/trabajo_en_equipo' => 'conferencias#trabajo_en_equipo'
 
-  get 'talleres/creatividad'
+  
+  get 'academy/emprendedores/lean_startup' => 'talleres#lean_startup'
 
-  get 'talleres/modelos_de_negocio'
+  get 'academy/emprendedores/prototipado' => 'talleres#prototipado'
 
-  get 'talleres/legal_para_startups'
+  get 'academy/emprendedores/creatividad' => 'talleres#creatividad'
 
-  get 'talleres/finanzad_de_supervivencia'
+  get 'academy/emprendedores/modelos_de_negocio' => 'talleres#modelos_de_negocio'
 
-  get 'c_org/nuevas_lineas_de_negocio'
+  get 'academy/emprendedores/legal_para_startups' => 'talleres#legal_para_startups'
 
-  get 'c_org/cultura_de_la_innovacion'
+  get 'academy/emprendedores/finanzas_de_supervivencia' => 'talleres#finanzas_de_supervivencia'
 
-  get 'c_org/implementacion_de_ideas_de_negocio'
+  
+  get 'academy/organizaciones/nuevas_lineas_de_negocio' => 'c_org#nuevas_lineas_de_negocio'
 
-  get 'c_org/planeacion_estrategica'
+  get 'academy/organizaciones/cultura_de_la_innovacion' => 'c_org#cultura_de_la_innovacion'
 
+  get 'academy/organizaciones/implementacion_de_ideas_de_negocio' => 'c_org#implementacion_de_ideas_de_negocio'
+
+  get 'academy/organizaciones/planeacion_estrategica' => 'c_org#planeacion_estrategica'
+
+  
+  
   get '/academy' => 'academy#academy'
 
   get 'academy/emprendedores'
@@ -49,6 +55,8 @@ Rails.application.routes.draw do
 
   get 'academy/conferencias'
 
+  
+  
   get '/soluciones_digitales' => 'soluciones_digitales#soluciones_digitales'
 
   get 'soluciones_digitales/web_design'
@@ -61,24 +69,29 @@ Rails.application.routes.draw do
 
   get 'soluciones_digitales/branding'
 
+  
+  
   get 'idearia/nosotros'
+
+  
 
   get '/emprendedores' => 'emprendedores#emprendedores'
 
   get 'emprendedores/desafio_latam'
+
+  
 
   get 'gestion_de_talento/gestion_de_talento'
 
 
   get '/proyectos_de_innovacion' => 'proyectos_de_innovacion#proyectos_de_innovacion'
 
-  get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

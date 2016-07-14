@@ -6,13 +6,8 @@ class DTalentoControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get intelligent" do
-    get :intelligent
-    assert_response :success
-  end
-
-  test "should get people" do
-    get :people
+  test "should get intelligent_people" do
+    get :intelligent_people
     assert_response :success
   end
 

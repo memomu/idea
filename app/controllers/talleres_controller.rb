@@ -14,6 +14,6 @@ class TalleresController < ApplicationController
   def legal_para_startups
   end
 
-  def finanzad_de_supervivencia
+  def finanzas_de_supervivencia
   end
 end
