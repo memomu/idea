@@ -1,59 +1,46 @@
 Rails.application.routes.draw do
 
 
+
  get '/desarrollo_de_talento' => 'desarrollo_de_talento#desarrollo_de_talento'
 
  
 
-  get '/academy/desarrollo_de_talento/competencias_de_innovacion' => 'd_talento#competencias_de_innovacion'
+  get '/academy/competencias_de_innovacion' => 'd_talento#competencias_de_innovacion'
 
-  get '/academy/desarrollo_de_talento/intelligent_people' => 'd_talento#intelligent_people'
+  get '/academy/intelligent_people' => 'd_talento#intelligent_people'
 
 
 
-  get '/academy/conferencias/innovacion' => 'conferencias#innovacion'
+  get '/academy/innovacion' => 'conferencias#innovacion'
 
-  get '/academy/conferencias/planeacion' => 'conferencias#planeacion'
+  get '/academy/planeacion' => 'conferencias#planeacion'
 
-  get '/academy/conferencias/liderazgo' => 'conferencias#liderazgo'
+  get '/academy/liderazgo' => 'conferencias#liderazgo'
 
-  get '/academy/conferencias/trabajo_en_equipo' => 'conferencias#trabajo_en_equipo'
-
-  
-  get 'academy/emprendedores/lean_startup' => 'talleres#lean_startup'
-
-  get 'academy/emprendedores/prototipado' => 'talleres#prototipado'
-
-  get 'academy/emprendedores/creatividad' => 'talleres#creatividad'
-
-  get 'academy/emprendedores/modelos_de_negocio' => 'talleres#modelos_de_negocio'
-
-  get 'academy/emprendedores/legal_para_startups' => 'talleres#legal_para_startups'
-
-  get 'academy/emprendedores/finanzas_de_supervivencia' => 'talleres#finanzas_de_supervivencia'
+  get '/academy/trabajo_en_equipo' => 'conferencias#trabajo_en_equipo'
 
   
-  get 'academy/organizaciones/nuevas_lineas_de_negocio' => 'c_org#nuevas_lineas_de_negocio'
+  get 'academy/lean_startup' => 'talleres#lean_startup'
 
-  get 'academy/organizaciones/cultura_de_la_innovacion' => 'c_org#cultura_de_la_innovacion'
+  get 'academy/prototipado' => 'talleres#prototipado'
 
-  get 'academy/organizaciones/implementacion_de_ideas_de_negocio' => 'c_org#implementacion_de_ideas_de_negocio'
+  get 'academy/creatividad' => 'talleres#creatividad'
 
-  get 'academy/organizaciones/planeacion_estrategica' => 'c_org#planeacion_estrategica'
+  get 'academy/modelos_de_negocio' => 'talleres#modelos_de_negocio'
+
+  get 'academy/legal_para_startups' => 'talleres#legal_para_startups'
+
+  get 'academy/finanzas_de_supervivencia' => 'talleres#finanzas_de_supervivencia'
 
   
-  
-  get '/academy' => 'academy#academy'
+  get 'academy/nuevas_lineas_de_negocio' => 'c_org#nuevas_lineas_de_negocio'
 
-  get 'academy/emprendedores'
+  get 'academy/cultura_de_la_innovacion' => 'c_org#cultura_de_la_innovacion'
 
-  get 'academy/organizaciones'
+  get 'academy/implementacion_de_ideas_de_negocio' => 'c_org#implementacion_de_ideas_de_negocio'
 
-  get 'academy/gestion_de_talento'
-
-  get 'academy/herramientas'
-
-  get 'academy/conferencias'
+  get 'academy/planeacion_estrategica' => 'c_org#planeacion_estrategica'
 
   
   
@@ -78,6 +65,9 @@ Rails.application.routes.draw do
   get '/emprendedores' => 'emprendedores#emprendedores'
 
   get 'emprendedores/desafio_latam'
+
+
+  get '/academy' => 'academy#academy'
 
   
 

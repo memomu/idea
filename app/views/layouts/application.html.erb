@@ -1,14 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>IdeariaLab2</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<title>IdeariaLab</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://use.fontawesome.com/8e56b09395.js"></script>
 </head>
 <body>
 
-<%= yield %>
+	<div class="logo">
+		<%= link_to root_path do %> 
+		<%= image_tag src="logo.png" %>
+		<% end %>
+	</div>
+
+	<div class="menu">
+		<ul class="topnav">
+			<li class="hidden"><%= link_to "", root_path %></li>
+			<li class="o"><%=link_to "Proyectos de Innovación", proyectos_de_innovacion_path %></li>
+			<li class="e"><%=link_to "Emprendedores", emprendedores_path %></li>
+			<li class="a"><%=link_to "academy", academy_path %></li>
+			<li class="sd"><%=link_to "Idearia", idearia_nosotros_path %></li>
+			<li class="c"><a href="#about">Contacto</a</li>
+			<li class="icon">
+				<a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+			</li>
+		</ul>
+	</div>
+
+	<%= yield %>
+
+
+
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-3 col-xs-12">
+					<h4>newsletter</h4>
+					<input type="email" name="useremail" placeholder="Ingresa tu email">
+					<button class="fa fa-paper-plane-o buttono button_red"></button>
+				</div>
+
+				<div class="col-md-3 col-xs-4">
+					<h4>Oportunidades</h4>
+					<ul>
+						<li><%=link_to "Proyectos de Innovación", proyectos_de_innovacion_path %></li>
+						<li><%=link_to "Desarrollo de talento", desarrollo_de_talento_path %></li>
+						<li><%=link_to "Emprendedores", emprendedores_path %></li>
+						<li><%=link_to "Academy", academy_path %></li>
+						<li><%=link_to "Soluciones digitales", soluciones_digitales_path %></li>
+					</ul>
+				</div>
+
+				<div class="col-md-3 col-xs-4">
+					<h4>Idearia</h4>
+					<ul>
+						<li><a href="">
+							¿Qué hacemos?
+						</a>
+					</li>
+				<li><a href="">
+					Equipo
+				</a>
+			</li>
+			<li><a href="">
+				Contacto
+			</a>
+		</li>
+	</ul>
+</div>
+
+<div class="col-md-3 col-xs-4">
+	<h4>Social</h4>
+	<div id="icono">
+		<a href=""><span class="fa fa-twitter twitter" aria-hidden="true"></span></a>
+		<a href=""><span class="fa fa-facebook-official face" aria-hidden="true"></span></a>
+		<a href=""><span class="fa fa-instagram insta" aria-hidden="true"></span></a>
+		<a href=""><span class="fa fa-youtube-square you" aria-hidden="true"></span></a>
+	</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="direccion">
+	<h3>Encuéntranos</h3>
+	<hr class="red">
+	<p>Lago Zurich #219, Piso 12</p>
+	<p>Col. Ampliación Granada. CDMX 11529</p>
+	<p>Miguel Hidalgo, CDMX, México</p>
+	<a href="5512091873">Teléfono: (55) 1209 1873</a> <br>
+	<a href="mailto:contacto@idearialab.mx?Subject=Solicitud%20de%20información">contacto@idearialab.mx</a>
+</div>
+
+<div class="col-md-12">
+	<p class="copy">© 2016 Idearia Lab v1.0.0</p>
+</div>
+
+<script>
+	function myFunction() {
+		document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
+	}
+</script>
 
 </body>
 </html>

@@ -1,3 +1,405 @@
 // Place all the styles related to the emprendedores controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$light_grey: #F9F9FA;
+$grey: #f1f4f9;
+$dark_grey: #323a45;
+$red: #ff2e63;
+
+#principio {
+	text-align: center;
+	padding-top: 3rem;
+	img {
+	width: 150px;
+	}
+	p {
+		padding: 2rem 20%;
+	}
+}
+
+#breadcrum {
+	text-align: center;
+	ul {
+		background-color: #ececec;
+		list-style: none;
+		padding: .5rem 0;
+    li {
+    	display: inline;
+      a {
+        color: #747c83;
+        font-size: 1.1rem;
+  &:hover {
+    color: $red;
+    text-decoration: none;
+  }
+      }
+    }
+	}
+}
+
+#cards {
+	margin-bottom: 3rem;
+	ul {
+		list-style: none;
+		padding-left: 0;
+		li {
+			padding: 3rem;
+			margin-top: 2rem;
+			background-color: white;
+			text-align: center;
+	&:hover {
+    background-color: $grey;
+  }
+			img {
+				width: 100px;
+
+			}
+			h3 {
+				font-size: 1.2em;
+				color: $red;
+				font-weight: 700;
+			}
+			p {
+				margin-top: 1rem;
+				color: $dark_grey;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.talleres {
+	color: $red;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 3rem;
+}
+
+.texto_talleres {
+	text-align: center;
+	padding: 0 15%;
+}
+
+#total {
+	margin-top: 2rem;
+	h2 {
+		color: $dark_grey;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+
+#curso {
+	padding: 3rem 6rem;
+	margin-top: 2rem;
+	background-color: white;
+	ul {
+		list-style: none;
+		padding-left: 0px;
+		li {
+			h3 {
+				text-transform: uppercase;
+				margin-top: 5rem;
+				color: $dark_grey;
+				font-size: 1.3em;
+				font-weight: 900;
+			}
+		}
+	}
+}
+
+#form {
+	padding: 3rem;
+	margin-top: 2rem;
+	background-color: white;
+	h3 {
+		color: $dark_grey;
+		text-align: center;
+		font-size: 1.8em;
+		text-transform: uppercase;
+	}
+}
+
+#cambio {
+	padding: 4rem 0;
+}
+
+#izq {
+	background-color: $red;
+	padding: 4rem;
+	span {
+		position: absolute;
+		text-align: left;
+		bottom: 95px;
+		right: 250px;
+		color: white;
+	}
+	h4 {
+		padding: 4rem 2rem;
+		border: solid 3px white;
+		text-align: right;
+		color: white;
+		text-transform: uppercase;
+	}
+}
+
+#der {
+	background-color: $dark_grey;
+	padding: 4rem;
+	span {
+		position: absolute;
+		text-align: right;
+		bottom: 95px;
+		left: 250px;
+		color: white;
+
+	}
+	h4 {
+		padding: 4rem 2rem;
+		border: solid 3px white;
+		color: white;
+		text-transform: uppercase;
+	}
+}
+
+input[type="name"], input[type="email"], input[type="number"], input[type="date"], input[type="text"], textarea {
+width: 80%;
+border: none;
+padding-left: 1rem;
+border-bottom: solid 2px $grey;
+height: 30px;
+}
+
+label {
+	margin-top: 1rem;
+	text-transform: uppercase;
+	color: $dark_grey;
+}
+
+textarea {
+	height: 90px !important;
+}
+
+#share_box {
+	text-align: center;
+	margin-top: 2rem;
+	h4 {
+		text-transform: uppercase;
+		font-weight: 900;
+	}
+	i {
+		font-size: 2em;
+		margin: 0 .25rem;
+	}
+}
+
+#gran_texto {
+	background-color: white;
+	height: 100vh; 
+	padding: 20%;
+	h1 {
+		color: $dark_grey;
+		text-align: center;
+	}
+}
+
+#A_emprendedores {
+	background-color: $dark_grey;
+	padding: 2rem 2rem 4rem 2rem;
+	h2 {
+		text-align: center;
+		color: white;
+		text-transform: uppercase;
+	}
+	ul {
+		list-style: none;
+		padding-left: 0;
+		margin-left: 0;
+		li {
+			text-align: center;
+			padding: 4rem;
+			width: 32%;
+			float: left;
+			margin: 0 .5% 1rem .5%;
+			border: solid 2px white;
+			cursor: pointer;
+			&:hover {
+				background-color: #444444;
+			}
+			h3 {
+				color: white;
+				text-transform: uppercase;
+				font-size: 1.2em;
+			}
+			p {
+				font-size: .9em;
+				color: #7c7f84;
+			}
+		}
+	}
+}
+
+@media (max-width: 700px)
+{
+#A_emprendedores {
+	ul {
+		li {
+			width: 49%;
+			margin: 0 .5% 1rem .5%;
+			height: 150px;
+			max-height: 150px;
+		}
+	}
+}
+}
+
+
+/*Orga */
+
+#O_emprendedores {
+	padding: 2rem 2rem 4rem 2rem;
+	h2 {
+		text-align: center;
+		color: $dark_grey;
+		text-transform: uppercase;
+	}
+	ul {
+		list-style: none;
+		padding-left: 0;
+		margin-left: 0;
+		li {
+			text-align: center;
+			padding: 4rem;
+			width: 49%;
+			float: left;
+			margin: 0 .5% 1rem .5%;
+			border: solid 2px white;
+			cursor: pointer;
+			&:hover {
+				background-color: $grey; 
+			}
+			h3 {
+				color: $red;
+				text-transform: uppercase;
+				font-size: 1.2em;
+			}
+			p {
+				font-size: .9em;
+				color: #7c7f84;
+			}
+		}
+	}
+}
+
+@media (max-width: 700px)
+{
+#O_emprendedores {
+	ul {
+		li {
+			height: 150px;
+			max-height: 150px;
+		}
+	}
+}
+}
+
+/*Talento */
+
+#T_emprendedores {
+	padding: 2rem 2rem 4rem 2rem;
+	background-color: white;
+	h2 {
+		text-align: center;
+		color: $dark_grey;
+		text-transform: uppercase;
+	}
+	ul {
+		list-style: none;
+		padding-left: 0;
+		margin-left: 0;
+		li {
+			text-align: center;
+			padding: 4rem;
+			width: 49%;
+			float: left;
+			margin: 0 .5% 1rem .5%;
+			border: solid 2px $red;
+			cursor: pointer;
+			&:hover {
+				background-color: $light_grey; 
+			}
+			h3 {
+				color: $red;
+				text-transform: uppercase;
+				font-size: 1.2em;
+			}
+			p {
+				font-size: .9em;
+				color: #7c7f84;
+			}
+		}
+	}
+}
+
+@media (max-width: 700px)
+{
+#T_emprendedores {
+	ul {
+		li {
+			height: 150px;
+			max-height: 150px;
+		}
+	}
+}
+}
+
+/*Confe*/
+
+#C_emprendedores {
+	padding: 2rem 2rem 4rem 2rem;
+	background-color: $dark_grey;
+	h2 {
+		text-align: center;
+		color: white;
+		text-transform: uppercase;
+	}
+	ul {
+		list-style: none;
+		padding-left: 0;
+		margin-left: 0;
+		li {
+			text-align: center;
+			padding: 4rem;
+			width: 49%;
+			float: left;
+			margin: 0 .5% 1rem .5%;
+			border: solid 2px white;
+			cursor: pointer;
+			&:hover {
+				background-color: #444444; 
+			}
+			h3 {
+				color: white;
+				text-transform: uppercase;
+				font-size: 1.2em;
+			}
+			p {
+				font-size: .9em;
+				color: #7c7f84;
+			}
+		}
+	}
+}
+
+@media (max-width: 700px)
+{
+#C_emprendedores {
+	ul {
+		li {
+			height: 150px;
+			max-height: 150px;
+		}
+	}
+}
+}

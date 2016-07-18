@@ -1,0 +1,231 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+
+$light_grey: #F9F9FA;
+$grey: #f1f4f9;
+$dark_grey: #323a45;
+$red: #ff2e63;
+
+
+ body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: $light_grey;
+ }
+
+hr {
+  border-width: 2px;
+  max-width: 70px;
+}
+hr.light {
+  border-color: white;
+}
+
+hr.red {
+  border-color: $red;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+
+.button {
+  transition: background-color .25s linear;
+  color: white;
+  font-size: 14px;
+  min-width: 160px;
+  border-radius: 5px;
+  padding: 11px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  margin-top: 1rem;
+}
+
+.buttono {
+  transition: background-color .25s linear;
+  color: white;
+  font-size: 14px;
+  min-width: 50px;
+  border-radius: 5px;
+  padding: 11px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  margin-top: 1rem;
+  position: absolute;
+  top: 18px;
+}
+
+.button_red {
+  background-color: $red;
+  color: white;
+  &:hover {
+    color: white;
+    background-color: #f97294;
+  }
+}
+
+.button_grey {
+  color:grey;
+  border-color: grey;
+  &:hover {
+    color: #333333;
+    border-color: #333333;
+  }
+}
+
+.button_white {
+  color:white;
+  border-color: white;
+  &:hover {
+    color: red;
+    border-color: red;
+  }
+}
+
+.button_block {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+#footer {
+  background-color: white;
+  padding: 4rem .5rem;
+  margin-top: 4rem;
+  h4 {
+    color: #323a45;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+      span {
+        color: #747c83;
+        font-size: 3rem;
+        margin-right: .7rem;
+      }
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    li {
+      a {
+        color: #747c83;
+        font-size: 1.1rem;
+  &:hover {
+    color: $red;
+    text-decoration: none;
+  }
+
+      }
+    }
+  }
+}
+
+#direccion {
+  background-color: $dark_grey;
+  text-align: center;
+  padding: 1rem 0 2rem 0;
+  h3 {
+    color: white;
+    margin-bottom: 2rem;
+  }
+  p {
+    color: white;
+    font-size: 1.3rem;
+  }
+  a {
+    color: white;
+    font-size: 1.3rem;
+    &:hover {
+    color: $red;
+    text-decoration: none;
+  }
+  }
+}
+
+.copy {
+  color: $dark_grey;
+  margin-top: .5rem;
+}
+
+#icono, #share_box {
+  .face {
+    color: #3b5998;
+    &:hover {
+    opacity: .8;
+    }
+  }
+    .twitter {
+    color: #55acee;
+    &:hover {
+    opacity: .8;
+    }
+  }
+    .insta {
+    color: #e95950;
+    &:hover {
+    opacity: .8;
+    }
+  }
+    .you {
+    color: #bb0000;
+    &:hover {
+    opacity: .8;
+    }
+  }
+}
+
+@media (max-width: 800px)
+{
+
+#banner {
+background-attachment: unset;
+}
+}
+

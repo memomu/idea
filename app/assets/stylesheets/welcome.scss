@@ -1,3 +1,477 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$light_grey: #F9F9FA;
+$grey: #f1f4f9;
+$dark_grey: #3c3c3c;
+$red: #ff2e63;
+
+menu {
+	text-align: center;
+}
+
+ul.topnav {
+    list-style-type: none;
+    /*margin: 0;*/
+    padding: 0;
+    overflow: hidden;
+    display: table;   /* Allow the centering to work */
+		margin: 0 auto;
+}
+
+/* Float the list items side by side */
+ul.topnav li {
+	display: inline;
+	margin: .5rem;
+	/*float: left;*/
+}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: $dark_grey;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: .8em;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-bottom: solid 8px transparent;
+}
+
+/* Change background color of links on hover */
+.e a:hover {border-bottom: solid 8px $red;}
+
+.o a:hover {border-bottom: solid 8px #351D52;}
+
+.dt a:hover {border-bottom: solid 8px #247471;}
+
+.a a:hover {border-bottom: solid 8px #F1AD06;}
+
+.sd a:hover {border-bottom: solid 8px #F0742E;}
+
+.i a:hover {border-bottom: solid 8px #BF2623;}
+
+.c a:hover {border-bottom: solid 8px #BF2D83;}
+
+
+
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:950px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:950px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+ #banner {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	margin-bottom: 1rem;
+	background-attachment: fixed;
+	background-blend-mode: multiply;
+  background-color: #989898;
+}
+
+.imagen_fondo_banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 1rem;
+  /*background-attachment: fixed;*/
+  background-blend-mode: multiply;
+  background-color: #989898;
+  background-image: image-url("innova_cover.jpg");
+  padding: 4rem 0;
+}
+
+.cover_home {
+  background-image: image-url("innova_cover.jpg");
+  height: 85vh;
+}
+
+.cover_emprendedores {
+	background-image: image-url("innova_cover.jpg");
+	height: 85vh;
+}
+
+.cover_organizaciones {
+  background-image: image-url("innova_cover.jpg");
+  height: 85vh;
+}
+
+.cover_desarrollo_de_talento {
+  background-image: image-url("innova_cover.jpg");
+  height: 85vh;
+}
+
+.cover_academy {
+  background-image: image-url("innova_cover.jpg");
+  height: 85vh;
+}
+
+.cover_soluciones_digitales {
+  background-image: image-url("innova_cover.jpg");
+  height: 85vh;
+}
+
+.home2 {
+  background-image: image-url("innova_cover.jpg");
+  height: 45vh;
+}
+
+.logo {
+	text-align: center;
+	padding: 1rem;
+}
+
+.typed {
+	text-align: left;
+	color: white;
+	text-transform: uppercase;
+	padding: 0 5vw 0 5vw;
+	font-size: 3.2rem;
+	margin: 0px;
+  font-weight: 300;
+  letter-spacing: 1000;
+}
+
+.typed2 {
+	text-align: left;
+	color: white;
+	text-transform: uppercase;
+	padding: 30vh 5vw 0 5vw;
+	font-size: 6.2rem;
+	margin: 0px;
+  font-weight: 900;
+}
+
+  
+
+.mid_banner_text {
+    padding: 15vh 15vw 0 15vw;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+}
+
+
+#texto {
+  text-align: center;
+  h3 {
+    font-weight: 300;
+    font-size: 1.3em;
+  }
+}
+
+
+#emprendedor, #emprendedor3, #emprendedor5 {
+  background-color: white;
+  padding: 3rem 0;
+  img {
+    width: 100%;
+  }
+  h3 {
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  img {
+    width: 80%;
+  }
+}
+
+#emprendedor2, #emprendedor4 {
+  background-color: $grey;
+  padding: 3rem 0;
+  img {
+    width: 100%;
+  }
+  h3 {
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  img {
+    width: 80%;
+  }
+}
+
+#trio {
+  text-align: center;
+  .servicio{
+    background-color: white;
+    margin-top: -5rem;
+    padding: 3rem 2.5%;
+        -webkit-box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+    -moz-box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+    box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+  } 
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+
+  p {
+    text-align: justify;
+  }
+}
+
+#clientes {
+  margin: 4rem 0;
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: $red;
+  }
+  p {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 0 10rem;
+    color: #8e8e8e;
+  }
+  img {
+    width: 70%;
+        -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+            filter: grayscale(100%); 
+  }
+  ul {
+    list-style: none;
+  }
+}
+
+
+#titulos {
+  text-align: center;
+  h3 {
+    color: white;
+    text-transform: uppercase;
+  }
+  p{
+    color: $grey;
+    margin-bottom: 5rem;
+  }
+}
+
+
+#questions {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  li {
+    margin-bottom: 4rem;
+    padding: 0 5rem;
+    span {
+      position: absolute;
+      color: white;
+      font-size: 1.5em;
+      top: 2rem;
+      margin-left: -3.5rem;
+    }
+    h4 {
+      color: white;
+    }
+    p {
+     color: #cccccc;
+    }
+    a {
+      color: $red;
+    }
+  }
+}
+
+
+#proceso {
+  margin: 5rem 0;
+  text-align: center;
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: $red;
+    font-size: 1.8em;
+  }
+  ul {
+    list-style: none;
+    margin: 2rem 0 0 0;
+    padding: 0;
+    li { margin-top: .7rem;
+      h3 {
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 1.4rem;
+        margin-top: 1rem;
+      }
+      h4 {
+        color: $red;
+        text-transform: uppercase;
+        font-size: 1em;
+        text-align: center;
+        font-weight: 900;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.c_r {
+  background-color: $red;
+  border: 3px solid #f791ab;
+}
+
+.c_a {
+  background-color: #2e78ff;
+  border: 3px solid #689bf7;
+}
+
+.c_v {
+  background-color: #20af25;
+  border: 3px solid #3ec143;
+}
+
+.c_m {
+  background-color: #cc2eff;
+  border: 3px solid #d657ff;
+}
+
+#equipo {
+  text-align: center;
+  padding: 2rem;
+  h2 {
+    color: $dark_grey;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2em;
+    margin-bottom: 2rem;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    li {
+      margin-bottom: 2rem;
+      img {
+        width: 50%;
+      }
+      h4 {
+        color: $red;
+      }
+    }
+  }
+}
+
+.hexagon {
+  position: relative;
+  width: 50px; 
+  height: 28.87px;
+  background-color: $dark_grey;
+  margin: 25px auto 20px auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 35.36px;
+  height: 35.36px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 7.3223px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.hexagon:before {
+  top: -17.6777px;
+}
+
+.hexagon:after {
+  bottom: -17.6777px;
+}
+
+/*cover up extra shadows*/
+.hexagon span {
+  display: block;
+  position: absolute;
+  top:0px;
+  left: 0;
+  width:50px;
+  height:28.8675px;
+  z-index: 2;
+  background: inherit;
+  color: white;
+  padding: 10%;
+}
+
+  .rojo {
+  background-color: $red;
+}
+
+.linea {
+  height: 40px;
+  background-color: transparent;
+  border-bottom: dotted 3px #cecece;
+}
+
+
+#tripas {
+  background-color: white;
+  padding: 6rem 0;
+  text-align: center;
+  h2 {
+    text-transform: uppercase;
+    color: $red;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    li {
+      margin-top: 2rem;
+      img {
+        width: 20%;
+      }
+      h3 {
+        color: $red;
+        font-weight: 900;
+        font-size: 1.2em;
+      }
+    }
+  }
+}

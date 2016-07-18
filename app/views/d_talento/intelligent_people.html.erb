@@ -1,2 +1,163 @@
-<h1>DTalento#intelligent_people</h1>
-<p>Find me in app/views/d_talento/intelligent_people.html.erb</p>
+<div id= "banner" class="cover_<%=params[:action]%>"> 
+<!-- <h1><%= "#{params[:action].split('_').join(" ")}" %></h1>  -->
+</div>
+
+<div id="principio">
+	<div class="container">
+		<%= image_tag src="#{params[:action]}.png" %>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos corporis, voluptates. Voluptate eos asperiores dolores exercitationem, praesentium esse facilis fugiat laborum, impedit itaque similique reprehenderit fuga quisquam ullam numquam tempora.</p>
+	</div>
+</div>
+
+
+<div id="breadcrum">
+		<ul>
+			<li><%= link_to "Inicio /", root_path %></li>
+			<li><%= link_to "#{params[:controller]} /", "#{params[:controller]}"%></li>
+			<li><%= link_to "#{params[:action]}", "#{params[:action]}"%></li>
+		</ul>
+</div>
+
+
+<div id="total">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div id="curso">
+				<h2><%= "#{params[:action].split('_').join(" ")}" %></h2>
+				<hr class="red">
+					<ul>
+						<li>
+						<h3>¿En qué consite?</h3>	
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est officia animi doloremque id a magni minima quos error deserunt dicta aperiam tenetur maxime rem quae, perferendis repellendus! Ipsum, provident, deserunt?</p>
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est officia animi doloremque id a magni minima quos error deserunt dicta aperiam tenetur maxime rem quae, perferendis repellendus! Ipsum, provident, deserunt?</p>
+						</li>
+
+						<li>
+						<h3>¿Qué temas veremos?</h3>	
+							<p>Lorem Ipsum dolor sit amet</p>
+							<p>Lorem Ipsum dolor sit amet</p>
+							<p>Lorem Ipsum dolor sit amet</p>
+							<p>Lorem Ipsum dolor sit amet</p>
+						</li>
+
+						<li>
+						<h3>¿A quién va dirigido?</h3>	
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est officia animi doloremque id a magni minima quos error deserunt dicta aperiam tenetur maxime rem quae, perferendis repellendus! Ipsum, provident, deserunt?</p>
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est officia animi doloremque id a magni minima quos error deserunt dicta aperiam tenetur maxime rem quae, perferendis repellendus! Ipsum, provident, deserunt?</p>
+						</li>
+
+						<li>
+						<h3>Información Importante</h3>	
+						<h5>Inicio: </h5>
+						<h5>Horario: </h5>
+						<h5>Duración: </h5>
+						<h5>Lugar: </h5>
+						<h5>Capacidad	: </h5>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+			<div id="form">
+				<h3>Más información</h3>
+				<hr class="red">
+			  <form action="action_page.php">
+			  <label>Nombre completo</label> <br>
+			  <input type="name" name="nombre" placeholder="Introduce tu nombre completo"> <br>
+			  <label>Email</label> <br>
+			  <input type="email" name="email" placeholder="Introduce tu email">
+  	<br>
+			  <label>Mensaje</label> <br>
+			  <textarea name="comment" placeholder="Danos tus comentarios aquí"></textarea>
+  	<br>
+    <input type="submit" value="Submit" class="button button_red">
+  </form>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="cambio">
+<div class="container">
+	<div class="col-sm-6">
+<!-- 		<div id="izq">
+		<%= link_to root_path do %>
+			<h4>Curso anterior</h4>
+			<span class="fa fa-arrow-left" aria-hidden= "true"></span>
+		<% end %>
+		</div> -->
+	</div>
+	<div class="col-sm-6">
+		<div id="der">
+		<%= link_to academy_conferencias_planeacion_path do %>
+			<h4>Curso Siguiente</h4>
+		  <span class="fa fa-arrow-right" aria-hidden= "true"></span>
+		<% end %>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+<div id="share_box">
+<h4>Compartir</h4>
+<hr class="red">
+		<p>Comparte curso de <%= "#{params[:action].split('_').join(" ").capitalize}" %></p>
+
+		<a class="icon-twitter" rel="nofollow"
+    href="http://twitter.com/"
+    onclick="popUp=window.open(
+        'http://twitter.com/intent/tweet?text=\'<%= "#{params[:action].split('_').join(" ").capitalize}" %>\' por Idearia Lab - <%="#{request.original_url}"%>',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false">
+   <i class="fa fa-twitter-square twitter" aria-hidden="true"></i>
+</a>
+
+<a class="icon-facebook" rel="nofollow"
+    href="http://www.facebook.com/"
+    onclick="popUp=window.open(
+        'http://www.facebook.com/sharer.php?u=<%= request.original_url %>',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false">
+		<i class="fa fa-facebook-square face" aria-hidden="true"></i>
+</a>
+
+<a class="icon-gplus" rel="nofollow"
+    href="http://www.plus.google.com/"
+    onclick="popUp=window.open(
+        'https://plus.google.com/share?url=<%= request.original_url %>',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false">
+		<i class="fa fa-google-plus-square you" aria-hidden="true"></i>
+</a>
+
+<a class="icon-linkedin" rel="nofollow"
+    href="http://www.linkedin.com/"
+    onclick="popUp=window.open(
+        'http://www.linkedin.com/shareArticle?url=<%= request.original_url %>',
+        'popupwindow',
+        'scrollbars=yes,width=800,height=400');
+    popUp.focus();
+    return false">
+<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+</a>
+
+
+	</div>
+
+
+
+
