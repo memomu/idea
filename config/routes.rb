@@ -64,7 +64,7 @@ Rails.application.routes.draw do
 
   get '/emprendedores' => 'emprendedores#emprendedores'
 
-  get 'emprendedores/desafio_latam'
+  get 'emprendedores/desafio_emprendedor'
 
 
   get '/academy' => 'academy#academy'
